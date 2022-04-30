@@ -3,10 +3,10 @@
 A Visual Studio Code extension that allows to preview ZPL files.
 Relies on [Labelary API](http://labelary.com/service.html).
 
-## Release Notes
+## Changelog
 
-Users appreciate release notes as you update your extension.
+See [CHANGELOG.md](CHANGELOG.md).
 
-### 0.0.1
+## License
 
-Initial release.
+See [LICENSE](LICENSE).
