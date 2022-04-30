@@ -1,6 +1,6 @@
 {
   "name": "vscode-zpl-viewer",
-  "displayName": "VSCode ZPL Viewer",
+  "displayName": "ZPL Viewer",
   "description": "Display ZPL files in VSCode.",
   "version": "0.0.2",
   "engines": {
