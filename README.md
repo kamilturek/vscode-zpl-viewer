@@ -10,3 +10,8 @@ See [CHANGELOG.md](CHANGELOG.md).
 ## License
 
 See [LICENSE](LICENSE).
+
+## Contribution
+
+Please create a GitHub issue for any feedback, bugs, requests or issues.
+PRs are also welcome.
