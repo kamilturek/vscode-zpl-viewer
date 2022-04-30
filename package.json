@@ -34,6 +34,7 @@
       }
     ]
   },
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/kamilturek/vscode-zpl-viewer"
