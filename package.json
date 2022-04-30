@@ -39,6 +39,7 @@
     "type": "git",
     "url": "https://github.com/kamilturek/vscode-zpl-viewer"
   },
+  "publisher": "Kamil Turek",
   "scripts": {
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
