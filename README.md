@@ -1,6 +1,7 @@
 # vscode-zpl-viewer
 
 A Visual Studio Code extension that allows to preview ZPL files.
+Relies on [Labelary API](http://labelary.com/service.html).
 
 ## Release Notes
 
