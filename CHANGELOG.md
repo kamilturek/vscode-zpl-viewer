@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+## [0.0.4]
+
+- Set up automated releases.
+
 ## [0.0.3]
 
 - Changed the display name of the extension.
