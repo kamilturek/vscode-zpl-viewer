@@ -3,7 +3,7 @@ name: ZPL Preview Release
 on:
   release:
     types:
-      - prereleased
+      - released
 jobs:
   publish:
     runs-on: ubuntu-latest
