@@ -1,18 +1,17 @@
 ---
 name: ZPL Preview Release
 on:
-  push:
-  # release:
-  #   types:
-  #     - 'published'
+  release:
+    types:
+      - 'published'
 jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      # - name: Check version in package.json
-      #   run: 'grep -q ''"version": "${{ github.ref }}"'' package.json'
+      - name: Check version in package.json
+        run: 'grep -q ''"version": "${{ github.ref }}"'' package.json'
       - name: Check version in CHANGELOG.md
         run: 'grep -q ''## \[${{ github.ref }}]'' CHANGELOG.md'
       - name: Fail
