@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+## [0.0.7]
+
+- Improved automated releases.
+
 ## [0.0.4]
 
 - Set up automated releases.

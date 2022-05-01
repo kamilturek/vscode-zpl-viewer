@@ -14,8 +14,6 @@ jobs:
         run: 'grep -q ''"version": "${{ github.ref_name }}"'' package.json'
       - name: Check version in CHANGELOG.md
         run: 'grep -q ''## \[${{ github.ref_name }}]'' CHANGELOG.md'
-      - name: Fail
-        run: exit 1
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
