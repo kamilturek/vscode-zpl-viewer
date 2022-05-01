@@ -3,7 +3,7 @@ name: ZPL Preview Release
 on:
   release:
     types:
-      - 'published'
+      - prereleased
 jobs:
   publish:
     runs-on: ubuntu-latest
@@ -11,9 +11,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Check version in package.json
-        run: 'grep -q ''"version": "${{ github.ref }}"'' package.json'
+        run: 'grep -q ''"version": "${{ github.ref_name }}"'' package.json'
       - name: Check version in CHANGELOG.md
-        run: 'grep -q ''## \[${{ github.ref }}]'' CHANGELOG.md'
+        run: 'grep -q ''## \[${{ github.ref_name }}]'' CHANGELOG.md'
       - name: Fail
         run: exit 1
       - name: Install Node.js
