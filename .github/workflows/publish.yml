@@ -1,13 +1,23 @@
 ---
-name: 'ZPL Preview Release'
+name: ZPL Preview Release
 on:
   push:
   # release:
   #   types:
   #     - 'published'
 jobs:
+  pre-publish-checks:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Check version in package.json
+        run: 'grep ''"version": "${{ github.ref }}"'' package.json'
+      - name: Fail
+        run: exit 1
   publish:
-    runs-on: 'ubuntu-latest'
+    if: success()
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v3
