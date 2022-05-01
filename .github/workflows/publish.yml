@@ -1,19 +1,27 @@
 ---
-name: 'ZPL Preview Release'
+name: ZPL Preview Release
 on:
   release:
     types:
-      - 'published'
+      - released
 jobs:
   publish:
-    runs-on: 'ubuntu-latest'
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+      - name: Check version in package.json
+        run: 'grep -q ''"version": "${{ github.ref_name }}"'' package.json'
+      - name: Check version in CHANGELOG.md
+        run: 'grep -q ''## \[${{ github.ref_name }}]'' CHANGELOG.md'
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 16
+      - name: Install dependencies
+        run: npm install
+      - name: Install vsce
+        run: npm install -g vsce
       - name: Publish
         run: npm run publish
         env:
