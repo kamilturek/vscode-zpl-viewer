@@ -6,7 +6,7 @@ on:
   #   types:
   #     - 'published'
 jobs:
-  pre-publish-checks:
+  publish:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -15,12 +15,6 @@ jobs:
         run: 'grep ''"version": "${{ github.ref }}"'' package.json'
       - name: Fail
         run: exit 1
-  publish:
-    if: success()
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
