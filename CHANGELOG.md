@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+## [0.1.0]
+
+- Included a GIF into README.md.
+
 ## [0.0.7]
 
 - Improved automated releases.
