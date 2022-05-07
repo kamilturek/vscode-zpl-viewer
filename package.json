@@ -10,7 +10,6 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:vscode-zpl-viewer.helloWorld",
     "onCustomEditor:vscode-zpl-viewer.preview"
   ],
   "main": "./out/extension.js",
@@ -25,12 +24,6 @@
           }
         ],
         "priority": "default"
-      }
-    ],
-    "commands": [
-      {
-        "command": "vscode-zpl-viewer.helloWorld",
-        "title": "Hello World"
       }
     ]
   },
