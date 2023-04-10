@@ -2,6 +2,9 @@
 
 ## [Unreleased]
 
+- Added file system watcher to monitor for changes to the current document.
+  This allows the preview to be automatically updated whenever the ZPL file is changed.
+
 ## [0.1.0]
 
 - Included a GIF into README.md.

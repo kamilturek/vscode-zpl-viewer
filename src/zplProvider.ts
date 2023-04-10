@@ -25,6 +25,12 @@ export class ZPLEditorProvider implements vscode.CustomTextEditorProvider {
     webviewPanel: vscode.WebviewPanel,
     token: vscode.CancellationToken
   ): void | Thenable<void> {
+    vscode.workspace
+      .createFileSystemWatcher(document.uri.fsPath)
+      .onDidChange(() => {
+        this.updateWebview(document, webviewPanel);
+      });
+
     webviewPanel.webview.options = {
       enableScripts: true,
     };
