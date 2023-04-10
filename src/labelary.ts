@@ -9,6 +9,5 @@ export function zplToPng(zpl: string, dpmm: number): Promise<string | void> {
         responseType: 'arraybuffer',
       }
     )
-    .then((res) => Buffer.from(res.data).toString('base64'))
-    .catch((err) => console.log('err', err));
+    .then((res) => Buffer.from(res.data).toString('base64'));
 }
