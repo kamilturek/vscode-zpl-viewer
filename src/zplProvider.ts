@@ -132,15 +132,19 @@ export class ZPLEditorProvider implements vscode.CustomTextEditorProvider {
     document: vscode.TextDocument,
     webviewPanel: vscode.WebviewPanel
   ): Promise<void> {
-    return zplToPng(document.getText(), this.dpmm).then(
-      (label: string | void) => {
+    return zplToPng(document.getText(), this.dpmm)
+      .then((label: string | void) => {
         if (label) {
           webviewPanel.webview.html = this.getHtmlForWebview(
             webviewPanel.webview,
             label
           );
         }
-      }
-    );
+      })
+      .catch((err: Error) => {
+        vscode.window.showErrorMessage(
+          `Error rendering ZPL preview: ${err.message}`
+        );
+      });
   }
 }
