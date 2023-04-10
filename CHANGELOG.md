@@ -4,6 +4,8 @@
 
 - Added file system watcher to monitor for changes to the current document.
   This allows the preview to be automatically updated whenever the ZPL file is changed.
+- Improved error handling. If an error occurs, an error message is displayed to
+  the user.
 
 ## [0.1.0]
 
